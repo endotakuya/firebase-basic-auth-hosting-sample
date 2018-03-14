@@ -1,0 +1,25 @@
+{
+  "hosting": {
+    "public": "public",
+    "rewrites": [{
+      "source": "**",
+      "function": "app"
+    }],
+    "redirects": [{
+      "source": "/",
+      "destination": "/auth",
+      "type": 302
+    }],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "functions": {
+    "predeploy": [
+      "npm --prefix \"$RESOURCE_DIR\" run lint",
+      "npm --prefix \"$RESOURCE_DIR\" run build"
+    ]
+  }
+}

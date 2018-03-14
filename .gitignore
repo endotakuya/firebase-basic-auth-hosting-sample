@@ -1,0 +1,5 @@
+.firebaserc
+functions/node_modules
+functions/lib/*
+!functions/lib/.keep
+node_modules
