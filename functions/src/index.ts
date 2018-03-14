@@ -1,11 +1,11 @@
-import * as functions from 'firebase-functions';
-import * as express from 'express';
-import * as basicAuth from 'basic-auth-connect';
+import * as functions from 'firebase-functions'
+import * as express from 'express'
+import * as basicAuth from 'basic-auth-connect'
 
-const app = express();
+const app = express()
 
 // Basic Authfication
-app.use(basicAuth('hoge', 'fuga'));
+app.use(basicAuth('hoge', 'fuga'))
 
 // Redirect root
 app.get('/auth', (req, res) => {
